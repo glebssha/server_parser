@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fun maker</title>
+    <link rel="stylesheet" href="/static/mycss.css">
+</head>
+<body>
+<h1>Jokes generator! {{ version }}</h1>
+<form action="/get-joke" method="post" accept-charset="utf-8" enctype="application/x-www-form-urlencoded">
+    <label for="code">Language</label>
+    <select id="code" name="code">
+        <optgroup label="Language">
+            <option value="1">English</option>
+            <option value="2">Russian</option>
+        </optgroup>
+    </select>
+    <br>
+    <input type="submit" value="Generate!"/>
+</form>
+<h2>{{ result }}</h2>
+</body>
+
+</html>
